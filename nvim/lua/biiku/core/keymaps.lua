@@ -5,7 +5,7 @@ vim.g.mapleader = "<Space>"
 ----------------
 
 vim.keymap.set("i", "kj", "<ESC>")
-vim.keymap.set("n", "<c-s>", ":w | source % <CR>")
+vim.keymap.set("n", "<c-s>", ":w <CR>")
 
 -------------
 -- PLUGINS

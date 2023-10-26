@@ -36,18 +36,19 @@ return require('packer').startup(function(use)
    requires = { {'nvim-lua/plenary.nvim'} }
   }
   use 'christoomey/vim-tmux-navigator'
+  use 'github/copilot.vim'
   use {
   'VonHeikemen/lsp-zero.nvim',
   branch = 'v3.x',
   requires = {
-    {'williamboman/mason.nvim'},
-    {'williamboman/mason-lspconfig.nvim'},
-    {'neovim/nvim-lspconfig'},
-    {'hrsh7th/nvim-cmp'},
-    {'hrsh7th/cmp-nvim-lsp'},
-    {'L3MON4D3/LuaSnip'},
+      {'williamboman/mason.nvim'},
+      {'williamboman/mason-lspconfig.nvim'},
+      {'neovim/nvim-lspconfig'},
+      {'hrsh7th/nvim-cmp'},
+      {'hrsh7th/cmp-nvim-lsp'},
+      {'L3MON4D3/LuaSnip'},
+    }
   }
-}
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
