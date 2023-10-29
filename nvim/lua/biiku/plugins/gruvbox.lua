@@ -1,3 +1,3 @@
 require("gruvbox").setup({
-  transparent_mode = true
+	transparent_mode = true,
 })
