@@ -15,18 +15,15 @@ return require('packer').startup(function(use)
   use 'wbthomason/packer.nvim'
   use "ellisonleao/gruvbox.nvim" 
   use {
-   "nvim-neo-tree/neo-tree.nvim",
-    branch = "v3.x",
-    requires = { 
-      "nvim-lua/plenary.nvim",
-      "nvim-tree/nvim-web-devicons", -- not strictly required, but recommended
-      "MunifTanjim/nui.nvim",
-    }
-  }  
-  use {
     'nvim-lualine/lualine.nvim',
     requires = { 'nvim-tree/nvim-web-devicons', opt = true }
   } 
+  use {
+   'nvim-tree/nvim-tree.lua',
+    requires = {
+    'nvim-tree/nvim-web-devicons', 
+    },
+  }
   use {
     'nvim-treesitter/nvim-treesitter',
     run = ':TSUpdate'
@@ -49,6 +46,8 @@ return require('packer').startup(function(use)
       {'L3MON4D3/LuaSnip'},
     }
   }
+  use "nvimtools/none-ls.nvim"
+  use "jayp0521/mason-null-ls.nvim"
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins

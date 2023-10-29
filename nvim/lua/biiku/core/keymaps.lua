@@ -1,20 +1,13 @@
 vim.g.mapleader = "<Space>" 
 
-----------------
--- VIM KEYMAPS
-----------------
-
+-- vim keymaps
 vim.keymap.set("i", "kj", "<ESC>")
 vim.keymap.set("n", "<c-s>", ":w <CR>")
 
--------------
--- PLUGINS
--------------
-
--- Telescope
+-- telescope
 local builtin = require('telescope.builtin')
 vim.keymap.set('n', '<Space><Space>', builtin.find_files, {})
 
--- Nvim-tree 
+-- nvim-tree 
 vim.keymap.set('n', '<C-b>', ':NvimTreeFindFileToggle<CR>')
 

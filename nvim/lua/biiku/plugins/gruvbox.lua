@@ -1,1 +1,3 @@
-vim.cmd([[colorscheme gruvbox]])
+require("gruvbox").setup({
+  transparent_mode = true
+})
