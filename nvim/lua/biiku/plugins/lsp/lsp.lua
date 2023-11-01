@@ -4,6 +4,15 @@ lsp_zero.on_attach(function(_, bufnr)
 	lsp_zero.default_keymaps({ buffer = bufnr })
 end)
 
+local cmp = require("cmp")
+
+cmp.setup({
+	mapping = cmp.mapping.preset.insert({
+		["<C-Space"] = cmp.mapping.complete(),
+		["<CR>"] = cmp.mapping.confirm({ select = false }),
+	}),
+})
+
 require("mason").setup({})
 require("mason-lspconfig").setup({
 	ensure_installed = { "eslint", "tsserver", "lua_ls" },
