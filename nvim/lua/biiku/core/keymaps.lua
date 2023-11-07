@@ -2,7 +2,7 @@ vim.g.mapleader = " "
 
 -- vim keymaps
 vim.keymap.set("i", "kj", "<ESC>")
-vim.keymap.set("n", "<c-s>", ":w <CR>")
+vim.keymap.set("n", "<C-s>", ":w <CR>")
 vim.keymap.set("n", "<tab>", ">>")
 
 -- telescope
