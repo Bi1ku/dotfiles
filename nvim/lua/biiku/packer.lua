@@ -50,12 +50,7 @@ return require("packer").startup(function(use)
 	use("nvimtools/none-ls.nvim")
 	use("jayp0521/mason-null-ls.nvim")
 	use("windwp/nvim-ts-autotag")
-	use({
-		"windwp/nvim-autopairs",
-		config = function()
-			require("nvim-autopairs").setup({})
-		end,
-	})
+	use("windwp/nvim-autopairs")
 	use("nvim-tree/nvim-web-devicons")
 	use("goolord/alpha-nvim")
 	use("lewis6991/gitsigns.nvim")
