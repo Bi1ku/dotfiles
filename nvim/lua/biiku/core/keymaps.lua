@@ -4,6 +4,8 @@ vim.g.mapleader = " "
 vim.keymap.set("i", "kj", "<ESC>")
 vim.keymap.set("n", "<C-s>", ":w <CR>")
 vim.keymap.set("n", "<tab>", ">>")
+vim.keymap.set("n", "<S-e>", "$")
+vim.keymap.set("n", "<S-b>", "0")
 
 -- telescope
 local builtin = require("telescope.builtin")
@@ -14,6 +16,7 @@ vim.keymap.set("n", "<Leader><Space>", builtin.find_files)
 vim.keymap.set("n", "<C-b>", ":NvimTreeFindFileToggle<CR>")
 
 -- barbar
+vim.keymap.set("n", "<Leader>w", "<Cmd>BufferClose<CR>")
 vim.keymap.set("n", "<Leader>p", "<Cmd>BufferPrevious<CR>")
 vim.keymap.set("n", "<Leader>n", "<Cmd>BufferNext<CR>")
 vim.keymap.set("n", "<Leader>1", "<Cmd>BufferGoto 1<CR>")
