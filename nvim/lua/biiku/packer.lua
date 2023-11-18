@@ -13,11 +13,19 @@ local packer_bootstrap = ensure_packer()
 
 return require("packer").startup(function(use)
 	use("wbthomason/packer.nvim")
+
+	-- theme
+	use("goolord/alpha-nvim")
 	use("ellisonleao/gruvbox.nvim")
 	use({
 		"nvim-lualine/lualine.nvim",
-		requires = { "nvim-tree/nvim-web-devicons", opt = true },
+		requires = { "nvim-tree/nvim-web-devicons" },
 	})
+
+	-- git integration
+	use("lewis6991/gitsigns.nvim")
+
+	-- navigation
 	use({
 		"nvim-tree/nvim-tree.lua",
 		requires = {
@@ -25,16 +33,14 @@ return require("packer").startup(function(use)
 		},
 	})
 	use({
-		"nvim-treesitter/nvim-treesitter",
-		run = ":TSUpdate",
-	})
-	use({
 		"nvim-telescope/telescope.nvim",
 		tag = "0.1.4",
 		requires = { { "nvim-lua/plenary.nvim" } },
 	})
+	use("romgrk/barbar.nvim")
 	use("christoomey/vim-tmux-navigator")
-	use("github/copilot.vim")
+
+	-- lsp
 	use({
 		"VonHeikemen/lsp-zero.nvim",
 		branch = "v3.x",
@@ -44,17 +50,19 @@ return require("packer").startup(function(use)
 			{ "neovim/nvim-lspconfig" },
 			{ "hrsh7th/nvim-cmp" },
 			{ "hrsh7th/cmp-nvim-lsp" },
-			{ "L3MON4D3/LuaSnip" },
 		},
 	})
 	use("nvimtools/none-ls.nvim")
 	use("jayp0521/mason-null-ls.nvim")
+	use("github/copilot.vim")
+
+	-- syntax
+	use({
+		"nvim-treesitter/nvim-treesitter",
+		run = ":TSUpdate",
+	})
 	use("windwp/nvim-ts-autotag")
 	use("windwp/nvim-autopairs")
-	use("nvim-tree/nvim-web-devicons")
-	use("goolord/alpha-nvim")
-	use("lewis6991/gitsigns.nvim")
-	use("romgrk/barbar.nvim")
 
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins
