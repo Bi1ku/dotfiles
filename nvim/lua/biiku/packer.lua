@@ -55,6 +55,11 @@ return require("packer").startup(function(use)
 	use("nvimtools/none-ls.nvim")
 	use("jayp0521/mason-null-ls.nvim")
 	use("github/copilot.vim")
+	use({
+		"L3MON4D3/LuaSnip",
+		tag = "v2.*",
+		run = "make install_jsregexp",
+	})
 
 	-- syntax
 	use({
