@@ -1,5 +1,6 @@
 require("biiku.plugins.lualine")
 require("biiku.plugins.treesitter")
+require("biiku.plugins.rose-pine")
 require("biiku.plugins.gruvbox")
 require("biiku.plugins.nvim-tree")
 require("biiku.plugins.lsp")

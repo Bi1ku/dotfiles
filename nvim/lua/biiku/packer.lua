@@ -16,6 +16,7 @@ return require("packer").startup(function(use)
 
 	-- theme
 	use("goolord/alpha-nvim")
+	use({ "rose-pine/neovim", as = "rose-pine" })
 	use("ellisonleao/gruvbox.nvim")
 	use({
 		"nvim-lualine/lualine.nvim",
