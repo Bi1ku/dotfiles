@@ -1,3 +1,2 @@
-require("biiku.packer")
-require("biiku.plugins")
-require("biiku.core")
+require("core")
+require("config.lazy")
