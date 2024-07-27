@@ -7,11 +7,6 @@ vim.keymap.set("n", "<tab>", ">>")
 vim.keymap.set("n", "<S-e>", "$")
 vim.keymap.set("n", "<S-b>", "0")
 
--- telescope
-local builtin = require("telescope.builtin")
-vim.keymap.set("n", "<Leader>g", builtin.live_grep)
-vim.keymap.set("n", "<Leader><Space>", builtin.find_files)
-
 -- nvim-tree
 vim.keymap.set("n", "<C-b>", ":NvimTreeFindFileToggle<CR>")
 vim.keymap.set("n", "<C-h>", ":NvimTreeOpen<CR>")

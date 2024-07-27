@@ -30,5 +30,5 @@ vim.opt.iskeyword:append("-")
 
 -- theme
 vim.opt.termguicolors = true
-vim.opt.background = "dark"
 vim.opt.signcolumn = "yes"
+vim.opt.background = "dark"
