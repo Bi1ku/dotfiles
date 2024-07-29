@@ -7,20 +7,4 @@ vim.keymap.set("n", "<tab>", ">>")
 vim.keymap.set("n", "<S-e>", "$")
 vim.keymap.set("n", "<S-b>", "0")
 
--- nvim-tree
-vim.keymap.set("n", "<C-b>", ":NvimTreeFindFileToggle<CR>")
-vim.keymap.set("n", "<C-h>", ":NvimTreeOpen<CR>")
-
--- barbar
-vim.keymap.set("n", "<Leader>w", "<Cmd>BufferClose<CR>")
-vim.keymap.set("n", "<Leader>p", "<Cmd>BufferPrevious<CR>")
-vim.keymap.set("n", "<Leader>n", "<Cmd>BufferNext<CR>")
-vim.keymap.set("n", "<Leader>1", "<Cmd>BufferGoto 1<CR>")
-vim.keymap.set("n", "<Leader>2", "<Cmd>BufferGoto 2<CR>")
-vim.keymap.set("n", "<Leader>3", "<Cmd>BufferGoto 3<CR>")
-vim.keymap.set("n", "<Leader>4", "<Cmd>BufferGoto 4<CR>")
-vim.keymap.set("n", "<Leader>5", "<Cmd>BufferGoto 5<CR>")
-vim.keymap.set("n", "<Leader>6", "<Cmd>BufferGoto 6<CR>")
-vim.keymap.set("n", "<Leader>7", "<Cmd>BufferGoto 7<CR>")
-vim.keymap.set("n", "<Leader>8", "<Cmd>BufferGoto 8<CR>")
-vim.keymap.set("n", "<Leader>9", "<Cmd>BufferGoto 9<CR>")
+vim.keymap.set("n", "<C-b>", ":Explore<CR>")

@@ -12,6 +12,7 @@ return {
 			local configs = require("lspconfig")
 
 			configs.lua_ls.setup({})
+			configs.jdtls.setup({})
 
 			vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename)
 			vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action)
