@@ -6,5 +6,3 @@ vim.keymap.set("n", "<C-s>", ":w <CR>")
 vim.keymap.set("n", "<tab>", ">>")
 vim.keymap.set("n", "<S-e>", "$")
 vim.keymap.set("n", "<S-b>", "0")
-
-vim.keymap.set("n", "<C-b>", ":Explore<CR>")
