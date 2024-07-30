@@ -1,6 +1,6 @@
 return {
 	"m4xshen/hardtime.nvim",
-	event = "BufEnter",
+	event = "InsertEnter",
 	lazy = true,
 	dependencies = { "MunifTanjim/nui.nvim", "nvim-lua/plenary.nvim" },
 	opts = {
