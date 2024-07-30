@@ -40,7 +40,7 @@ local config = {
 		vim.env.HOME .. "/.local/share/nvim/mason/share/jdtls/plugins/org.eclipse.equinox.launcher.jar",
 		-- TODO Update this to point to the correct jdtls subdirectory for your OS (config_linux, config_mac, config_win, etc)
 		"-configuration",
-		vim.env.HOME .. "/.local/share/nvim/mason/packages/jdtls/config_linux",
+		vim.env.HOME .. "/.local/share/nvim/mason/packages/jdtls/config_mac",
 		"-data",
 		workspace_dir,
 	},
@@ -54,7 +54,7 @@ local config = {
 	settings = {
 		java = {
 			-- TODO Replace this with the absolute path to your main java version (JDK 17 or higher)
-			home = "/usr/lib/jvm/java-17-openjdk-amd64",
+			home = "/opt/homebrew/Cellar/openjdk/22.0.1",
 			eclipse = {
 				downloadSources = true,
 			},
@@ -64,16 +64,8 @@ local config = {
 				-- The runtime name parameters need to match specific Java execution environments.  See https://github.com/tamago324/nlsp-settings.nvim/blob/2a52e793d4f293c0e1d61ee5794e3ff62bfbbb5d/schemas/_generated/jdtls.json#L317-L334
 				runtimes = {
 					{
-						name = "JavaSE-11",
-						path = "/usr/lib/jvm/java-11-openjdk-amd64",
-					},
-					{
-						name = "JavaSE-17",
-						path = "/usr/lib/jvm/java-17-openjdk-amd64",
-					},
-					{
-						name = "JavaSE-19",
-						path = "/usr/lib/jvm/java-19-openjdk-amd64",
+						name = "JavaSE-22",
+						path = "opt/homebrew/Cellar/openjdk/22.0.1",
 					},
 				},
 			},
