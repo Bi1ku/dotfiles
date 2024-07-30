@@ -45,7 +45,7 @@ return {
 
 		{
 			"hrsh7th/nvim-cmp",
-			name = "cmp",
+			name = "nvim-cmp",
 			event = "InsertEnter",
 			lazy = true,
 			dependencies = {
