@@ -1,6 +1,9 @@
 return {
-  "williamboman/mason.nvim",
-  name = "mason",
-  priority = 100,
-  opts = {},
+	"williamboman/mason.nvim",
+	lazy = false,
+	dependencies = {
+		"williamboman/mason-lspconfig.nvim",
+	},
+	name = "mason",
+	opts = {},
 }

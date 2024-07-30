@@ -2,6 +2,12 @@ return {
   {
     "nvim-telescope/telescope.nvim",
     name = "telescope",
+    lazy = true,
+    keys = {
+      { "<leader><space>", ":Telescope find_files<CR>" },
+      { "<C-b>",           ":Telescope file_browser path=%:p:h select_buffer=true<CR>" },
+      { "<leader>g",       ":Telescope live_grep" },
+    },
     tag = "0.1.8",
     dependencies = { "nvim-lua/plenary.nvim", "nvim-telescope/telescope-file-browser.nvim" },
     opts = {
@@ -17,22 +23,16 @@ return {
       },
     },
     config = function(_, opts)
-      local fb_actions = require("telescope._extensions.file_browser.actions")
-
       require("telescope").setup(opts)
       require("telescope").load_extension("file_browser")
-
-      local builtin = require("telescope.builtin")
-
-      vim.keymap.set("n", "<Leader>g", builtin.live_grep)
-      vim.keymap.set("n", "<C-b>", ":Telescope file_browser path=%:p:h select_buffer=true<CR>")
-      vim.keymap.set("n", "<Leader><Space>", builtin.find_files)
     end,
   },
 
   {
     "romgrk/barbar.nvim",
     name = "barbar",
+    lazy = true,
+    event = "BufEnter",
     dependencies = {
       "lewis6991/gitsigns.nvim",
       "nvim-tree/nvim-web-devicons",
