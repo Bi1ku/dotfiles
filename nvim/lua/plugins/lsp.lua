@@ -20,11 +20,14 @@ return {
 
       vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename)
       vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action)
+      vim.keymap.set("n", "gd", ":Telescope lsp_definitions<CR>")
+      vim.keymap.set("n", "gR", ":Telescope lsp_references<CR>")
     end,
   },
 
   {
     "hrsh7th/nvim-cmp",
+    name = "cmp",
     event = "InsertEnter",
     lazy = true,
     dependencies = {
@@ -47,10 +50,10 @@ return {
         },
 
         mapping = cmp.mapping.preset.insert({
-          ["<C-b>"] = cmp.mapping.scroll_docs(-4),
-          ["<C-f>"] = cmp.mapping.scroll_docs(4),
+          ["P"] = cmp.mapping.scroll_docs(-4),
+          ["N"] = cmp.mapping.scroll_docs(4),
           ["<C-e>"] = cmp.mapping.abort(),
-          ["<CR>"] = cmp.mapping.confirm({ select = true }),
+          ["<Tab>"] = cmp.mapping.confirm({ select = true }),
         }),
 
         sources = cmp.config.sources({
