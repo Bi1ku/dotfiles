@@ -1,13 +1,8 @@
-return {
-  {
-    "stevearc/dressing.nvim",
-    name = "dressing",
-    opts = {},
-    lazy = true,
-    event = "BufEnter",
-  },
+local scheme = "rose-pine"
+local scheme_table = {}
 
-  {
+if scheme == "rose-pine" then
+  scheme_table = {
     "rose-pine/neovim",
     name = "rose-pine",
     priority = 1000,
@@ -22,6 +17,33 @@ return {
 
       vim.cmd("colorscheme rose-pine")
     end,
+  }
+else
+  scheme_table = {
+    "ellisonleao/gruvbox.nvim",
+    priority = 1000,
+    name = "gruvbox",
+    lazy = false,
+    opts = {
+      transparent_mode = true,
+    },
+    config = function(_, opts)
+      require("gruvbox").setup(opts)
+
+      vim.cmd("colorscheme gruvbox")
+    end,
+  }
+end
+
+return {
+  scheme_table,
+
+  {
+    "stevearc/dressing.nvim",
+    name = "dressing",
+    opts = {},
+    lazy = true,
+    event = "BufEnter",
   },
 
   {

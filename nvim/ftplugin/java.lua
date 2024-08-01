@@ -3,19 +3,6 @@ local jdtls = require("jdtls")
 local project_name = vim.fn.fnamemodify(vim.fn.getcwd(), ":p:h:t")
 local workspace_dir = vim.env.HOME .. "/jdtls-workspace/" .. project_name
 
--- Needed for debugging
-local bundles = {
-	vim.fn.glob(
-		vim.env.HOME .. "/.local/share/nvim/mason/share/java-debug-adapter/com.microsoft.java.debug.plugin.jar"
-	),
-}
-
--- Needed for running/debugging unit tests
-vim.list_extend(
-	bundles,
-	vim.split(vim.fn.glob(vim.env.HOME .. "/.local/share/nvim/mason/share/java-test/*.jar", 1), "\n")
-)
-
 -- See `:help vim.lsp.start_client` for an overview of the supported `config` options.
 local config = {
 	-- The command that starts the language server
@@ -54,7 +41,7 @@ local config = {
 	settings = {
 		java = {
 			-- TODO Replace this with the absolute path to your main java version (JDK 17 or higher)
-			home = "/opt/homebrew/Cellar/openjdk/22.0.1",
+			home = "/opt/homebrew/Cellar/openjdk@17/17.0.12",
 			eclipse = {
 				downloadSources = true,
 			},
@@ -64,8 +51,8 @@ local config = {
 				-- The runtime name parameters need to match specific Java execution environments.  See https://github.com/tamago324/nlsp-settings.nvim/blob/2a52e793d4f293c0e1d61ee5794e3ff62bfbbb5d/schemas/_generated/jdtls.json#L317-L334
 				runtimes = {
 					{
-						name = "JavaSE-22",
-						path = "opt/homebrew/Cellar/openjdk/22.0.1",
+						name = "JavaSE-17",
+						path = "/opt/homebrew/Cellar/openjdk@17/17.0.12",
 					},
 				},
 			},
@@ -127,17 +114,7 @@ local config = {
 	flags = {
 		allow_incremental_sync = true,
 	},
-	init_options = {
-		-- References the bundles defined above to support Debugging and Unit Testing
-		bundles = bundles,
-	},
 }
-
--- Needed for debugging
-config["on_attach"] = function(client, bufnr)
-	jdtls.setup_dap({ hotcodereplace = "auto" })
-	require("jdtls.dap").setup_dap_main_class_configs()
-end
 
 -- This starts a new client & server, or attaches to an existing client & server based on the `root_dir`.
 jdtls.start_or_attach(config)
