@@ -8,7 +8,6 @@ return {
       { "<C-b>",           ":Telescope file_browser path=%:p:h select_buffer=true<CR>" },
       { "<leader>g",       ":Telescope live_grep<CR>" },
     },
-    tag = "0.1.8",
     dependencies = { "nvim-lua/plenary.nvim", "nvim-telescope/telescope-file-browser.nvim" },
     opts = {
       pickers = {
