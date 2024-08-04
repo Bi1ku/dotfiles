@@ -13,12 +13,14 @@ return {
       pickers = {
         find_files = {
           theme = "ivy",
+          hidden = true,
         },
       },
       extensions = {
         file_browser = {
           theme = "ivy",
           grouped = true,
+          hidden = true,
         },
       },
     },
