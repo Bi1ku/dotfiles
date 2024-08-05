@@ -10,7 +10,7 @@ return {
 		config = function()
 			local configs = require("lspconfig")
 			local capabilities = require("cmp_nvim_lsp").default_capabilities()
-			local lsps = { "lua_ls", "tsserver", "tailwindcss", "prismals" }
+			local lsps = { "lua_ls", "tsserver", "tailwindcss", "prismals", "pylsp" }
 
 			for _, lsp in pairs(lsps) do
 				configs[lsp].setup({

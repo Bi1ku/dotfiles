@@ -25,11 +25,26 @@ return {
   },
 
   {
+    "windwp/nvim-ts-autotag",
+    name = "autotag",
+    lazy = true,
+    event = {
+      "BufReadPre",
+      "BufNewFile",
+    },
+    opts = {},
+  },
+
+  {
     "windwp/nvim-autopairs",
-    event = "InsertEnter",
+    event = {
+      "BufReadPre",
+      "BufNewFile",
+    },
     lazy = true,
     name = "autopairs",
     opts = {},
+    config = true,
   },
 
   {
