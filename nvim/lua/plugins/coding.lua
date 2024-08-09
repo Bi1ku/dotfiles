@@ -50,7 +50,7 @@ return {
 
   {
     "nvimtools/none-ls.nvim",
-    name = "none-ls",
+    name = "null-ls",
     lazy = false,
     dependencies = {
       "nvim-lua/plenary.nvim",
@@ -63,8 +63,7 @@ return {
         sources = {
           null_ls.builtins.formatting.stylua,
           null_ls.builtins.formatting.prettier,
-          null_ls.builtins.formatting.google_java_format,
-          null_ls.builtins.formatting.clangd,
+          null_ls.builtins.formatting.clang_format,
         },
 
         on_attach = function(client, bufnr)
