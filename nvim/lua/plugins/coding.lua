@@ -2,12 +2,13 @@ return {
   {
     "zbirenbaum/copilot.lua",
     cmd = "Copilot",
+    name = "copilot",
     event = "InsertEnter",
     opts = {
       suggestion = {
         auto_trigger = true,
         keymap = {
-          accept = "<Tab>",
+          accept = "<C-e>",
         },
       },
     },
@@ -63,6 +64,7 @@ return {
           null_ls.builtins.formatting.stylua,
           null_ls.builtins.formatting.prettier,
           null_ls.builtins.formatting.google_java_format,
+          null_ls.builtins.formatting.clangd,
         },
 
         on_attach = function(client, bufnr)
