@@ -10,6 +10,8 @@ if scheme == "rose-pine" then
     opts = {
       styles = {
         transparency = true,
+        bold = false,
+        italic = false,
       },
     },
     config = function(_, opts)
