@@ -40,21 +40,21 @@ end
 return {
   scheme_table,
 
-  {
-    "stevearc/dressing.nvim",
-    name = "dressing",
-    opts = {},
-    lazy = true,
-    event = "BufEnter",
-  },
-
-  {
-    "nvim-lualine/lualine.nvim",
-    name = "lualine",
-    lazy = false,
-    dependencies = { "nvim-tree/nvim-web-devicons" },
-    opts = {},
-  },
+  --  {
+  --    "stevearc/dressing.nvim",
+  --    name = "dressing",
+  --    opts = {},
+  --    lazy = true,
+  --    event = "BufEnter",
+  --  },
+  --
+  --  {
+  --    "nvim-lualine/lualine.nvim",
+  --    name = "lualine",
+  --    lazy = false,
+  --    dependencies = { "nvim-tree/nvim-web-devicons" },
+  --    opts = {},
+  --  },
 
   {
     "nvim-treesitter/nvim-treesitter",
