@@ -1,0 +1,24 @@
+set scrolloff=8
+set incsearch
+set relativenumber
+set clipboard+=unnamed
+
+inoremap kj <esc>
+
+nnoremap <C-s> :w <CR>
+nnoremap <tab> >>
+
+nnoremap <S-e> $
+nnoremap <S-b> 0
+vnoremap <S-e> $
+vnoremap <S-b> 0
+
+noremap <C-u> {
+noremap <C-d> }
+noremap } <C-d>
+noremap { <C-u>
+
+vnoremap <C-u> {
+vnoremap <C-d> }
+vnoremap } <C-d>
+vnoremap { <C-u>
