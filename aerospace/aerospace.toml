@@ -10,14 +10,6 @@ on-focused-monitor-changed = ['move-mouse monitor-lazy-center']
 start-at-login = true
 
 [mode.main.binding]
-# See: https://nikitabobko.github.io/AeroSpace/goodness#open-a-new-window-with-applescript
-alt-o = '''exec-and-forget osascript -e '
- tell application "ITerm"
-     do script
-     activate
- end tell'
- '''
-
 alt-h = 'focus left'
 alt-j = 'focus down'
 alt-k = 'focus up'
@@ -66,7 +58,7 @@ alt-shift-8 = 'move-node-to-workspace 8'
 alt-shift-9 = 'move-node-to-workspace 9'
 alt-shift-0 = 'move-node-to-workspace 10'
 
-alt-shift-r = 'reload-config'
+alt-shift-c = 'reload-config'
 
 alt-r = 'mode resize'
 
