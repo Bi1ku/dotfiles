@@ -1,0 +1,3 @@
+[submodule "nvim/lua/custom/cowboy.nvim"]
+	path = nvim/lua/custom/cowboy.nvim
+	url = https://github.com/Bi1ku/cowboy.nvim.git
