@@ -63,10 +63,10 @@ alt-shift-c = 'reload-config'
 alt-r = 'mode resize'
 
 [mode.resize.binding]
-alt-h = 'resize width -10'
-alt-j = 'resize height +10'
-alt-k = 'resize height -10'
-alt-l = 'resize width +10'
+alt-h = 'resize width -100'
+alt-j = 'resize height +100'
+alt-k = 'resize height -100'
+alt-l = 'resize width +100'
 alt-esc = 'mode main'
 
 [gaps]

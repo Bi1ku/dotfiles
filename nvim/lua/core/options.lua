@@ -32,3 +32,6 @@ vim.opt.iskeyword:append("-")
 vim.opt.termguicolors = true
 vim.opt.signcolumn = "yes"
 vim.opt.background = "dark"
+
+-- no auto commenting new lines
+vim.cmd([[autocmd FileType * set formatoptions-=ro]])
