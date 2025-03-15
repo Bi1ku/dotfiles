@@ -40,44 +40,6 @@ return {
 		end,
 	},
 
-	--	{
-	--		"romgrk/barbar.nvim",
-	--		version = "*",
-	--		name = "barbar",
-	--		lazy = true,
-	--		event = "BufEnter",
-	--		dependencies = {
-	--			"lewis6991/gitsigns.nvim",
-	--			"nvim-tree/nvim-web-devicons",
-	--		},
-	--		init = function()
-	--			vim.g.barbar_auto_setup = false
-	--		end,
-	--		opts = {
-	--			animation = false,
-	--		},
-	--		config = function(_, opts)
-	--			require("barbar").setup(opts)
-	--
-	--			local key_opts = { noremap = true, silent = true }
-	--
-	-- TODO: LAZY LOAD KEYS
-	--			vim.keymap.set("n", "<Leader>w", ":BufferClose<CR>", key_opts)
-	--			vim.keymap.set("n", "<Leader>r", ":BufferRestore<CR>", key_opts)
-	--			vim.keymap.set("n", "<Leader>p", ":BufferPrevious<CR>", key_opts)
-	--			vim.keymap.set("n", "<Leader>n", ":BufferNext<CR>", key_opts)
-	--			vim.keymap.set("n", "<Leader>1", ":BufferGoto 1<CR>", key_opts)
-	--			vim.keymap.set("n", "<Leader>2", ":BufferGoto 2<CR>", key_opts)
-	--			vim.keymap.set("n", "<Leader>3", ":BufferGoto 3<CR>", key_opts)
-	--			vim.keymap.set("n", "<Leader>4", ":BufferGoto 4<CR>", key_opts)
-	--			vim.keymap.set("n", "<Leader>5", ":BufferGoto 5<CR>", key_opts)
-	--			vim.keymap.set("n", "<Leader>6", ":BufferGoto 6<CR>", key_opts)
-	--			vim.keymap.set("n", "<Leader>7", ":BufferGoto 7<CR>", key_opts)
-	--			vim.keymap.set("n", "<Leader>8", ":BufferGoto 8<CR>", key_opts)
-	--			vim.keymap.set("n", "<Leader>9", ":BufferGoto 9<CR>", key_opts)
-	--		end,
-	--	},
-
 	{
 		"ThePrimeagen/harpoon",
 		branch = "harpoon2",
