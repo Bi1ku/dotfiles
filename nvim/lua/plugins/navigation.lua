@@ -1,5 +1,6 @@
 return {
 	{
+		pin = true,
 		"nvim-telescope/telescope.nvim",
 		name = "telescope",
 		lazy = true,
@@ -42,6 +43,7 @@ return {
 
 	{
 		"ThePrimeagen/harpoon",
+		pin = true,
 		branch = "harpoon2",
 		dependencies = { "nvim-lua/plenary.nvim" },
 		config = function(_, opts)
@@ -73,6 +75,7 @@ return {
 
 	{
 		"christoomey/vim-tmux-navigator",
+		pin = true,
 		name = "tmux-navigator",
 		lazy = true,
 		cmd = {

@@ -1,5 +1,6 @@
 return {
 	{
+		pin = true,
 		"neovim/nvim-lspconfig",
 		name = "lspconfig",
 		lazy = false,
@@ -10,7 +11,8 @@ return {
 		config = function()
 			local configs = require("lspconfig")
 			local capabilities = require("cmp_nvim_lsp").default_capabilities()
-			local lsps = { "lua_ls", "ts_ls", "tailwindcss", "prismals", "clangd", "pylsp", "cssls", "cssmodules_ls" }
+			local lsps =
+				{ "lua_ls", "ts_ls", "tailwindcss", "prismals", "clangd", "pylsp", "cssls", "cssmodules_ls", "gopls" }
 
 			for _, lsp in pairs(lsps) do
 				configs[lsp].setup({
@@ -26,6 +28,7 @@ return {
 	},
 
 	{
+		pin = true,
 		"hrsh7th/nvim-cmp",
 		name = "cmp",
 		event = "InsertEnter",

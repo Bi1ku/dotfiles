@@ -8,7 +8,7 @@ vim.opt.expandtab = true
 vim.opt.autoindent = true
 
 -- line wrapping
-vim.opt.wrap = false
+vim.opt.wrap = true
 
 -- search settings
 vim.opt.ignorecase = true

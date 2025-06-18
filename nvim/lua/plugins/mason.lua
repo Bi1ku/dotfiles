@@ -1,4 +1,5 @@
 return {
+	pin = true,
 	"williamboman/mason.nvim",
 	lazy = false,
 	dependencies = {
