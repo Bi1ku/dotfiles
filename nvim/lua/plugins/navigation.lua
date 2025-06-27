@@ -1,5 +1,6 @@
 return {
 	{
+		pin = true,
 		"nvim-telescope/telescope.nvim",
 		name = "telescope",
 		lazy = true,
@@ -42,6 +43,7 @@ return {
 
 	{
 		"ThePrimeagen/harpoon",
+		pin = true,
 		branch = "harpoon2",
 		dependencies = { "nvim-lua/plenary.nvim" },
 		config = function(_, opts)
@@ -56,7 +58,7 @@ return {
 				harpoon.ui:toggle_quick_menu(harpoon:list())
 			end)
 
-			for _, idx in ipairs({ 1, 2, 3, 4 }) do
+			for _, idx in ipairs({ 1, 2, 3, 4, 5, 6, 7, 8, 9 }) do
 				vim.keymap.set("n", "<leader>" .. idx, function()
 					harpoon:list():select(idx)
 				end)
@@ -73,6 +75,7 @@ return {
 
 	{
 		"christoomey/vim-tmux-navigator",
+		pin = true,
 		name = "tmux-navigator",
 		lazy = true,
 		cmd = {

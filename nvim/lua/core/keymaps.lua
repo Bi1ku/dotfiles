@@ -18,3 +18,5 @@ vim.keymap.set("n", "«", ":vsplit <CR>") -- alt + \
 
 vim.keymap.set("n", "ø", ":vertical resize -10<CR>") -- alt + o
 vim.keymap.set("n", "π", ":vertical resize +10<CR>") -- alt + p
+
+vim.keymap.set("n", "gl", ":lua vim.diagnostic.open_float()<CR>")

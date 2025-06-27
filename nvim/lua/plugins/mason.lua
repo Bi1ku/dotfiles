@@ -1,9 +1,12 @@
 return {
-	"williamboman/mason.nvim",
-	lazy = false,
-	dependencies = {
-		"williamboman/mason-lspconfig.nvim",
+	{
+		pin = true,
+		"williamboman/mason.nvim",
+		lazy = false,
+		dependencies = {
+			"williamboman/mason-lspconfig.nvim",
+		},
+		name = "mason",
+		opts = {},
 	},
-	name = "mason",
-	opts = {},
 }

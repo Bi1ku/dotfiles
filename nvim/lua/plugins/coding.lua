@@ -1,28 +1,31 @@
 return {
 	{
+		pin = true,
 		"zbirenbaum/copilot.lua",
 		cmd = "Copilot",
 		name = "copilot",
 		event = "InsertEnter",
 		opts = {
+			enable = false,
 			suggestion = {
 				auto_trigger = true,
 				keymap = {
+					dismiss = "<C-r>",
 					accept = "<C-e>",
 				},
 			},
 		},
 	},
 
-	{
-		dir = "~/.config/nvim/lua/custom/cowboy.nvim",
-		opts = {
-			keys = { "h", "j", "k", "l" },
-			thresh = 5,
-			delay = 1000,
-			disable = { "txt", "md" },
-		},
-	},
+	--	{
+	--		dir = "~/.config/nvim/lua/custom/cowboy.nvim",
+	--		opts = {
+	--			keys = { "h", "j", "k", "l" },
+	--			thresh = 5,
+	--			delay = 1000,
+	--			disable = { "txt", "md" },
+	--		},
+	--	},
 
 	{
 		"nvimtools/none-ls.nvim",
@@ -49,6 +52,7 @@ return {
 					null_ls.builtins.formatting.prettier,
 					null_ls.builtins.formatting.clang_format,
 					null_ls.builtins.formatting.black,
+					null_ls.builtins.formatting.goimports,
 				},
 
 				on_attach = function(client, bufnr)

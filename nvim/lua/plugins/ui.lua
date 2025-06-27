@@ -1,8 +1,9 @@
-local scheme = "rose-pine"
+local scheme = "default"
 local scheme_table = {}
 
 if scheme == "rose-pine" then
 	scheme_table = {
+		pin = true,
 		"rose-pine/neovim",
 		name = "rose-pine",
 		priority = 1000,
@@ -20,8 +21,9 @@ if scheme == "rose-pine" then
 			vim.cmd("colorscheme rose-pine")
 		end,
 	}
-else
+elseif scheme == "gruvbox" then
 	scheme_table = {
+		pin = true,
 		"ellisonleao/gruvbox.nvim",
 		priority = 1000,
 		name = "gruvbox",
@@ -35,11 +37,19 @@ else
 			vim.cmd("colorscheme gruvbox")
 		end,
 	}
+else
+	scheme_table = {
+		"tribela/transparent.nvim",
+		event = "VimEnter",
+		config = true,
+	}
+	vim.cmd("colorscheme default")
 end
 
 return {
 	scheme_table,
 	{
+		pin = true,
 		"nvim-treesitter/nvim-treesitter",
 		event = { "BufReadPre", "BufNewFile" },
 		lazy = true,
